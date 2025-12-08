@@ -39,9 +39,9 @@
 │   └──  PUT /status/{order_id}        # Update Order Status           ✅ (status) | [id, status]
 │
 ├──  payments                      # Payment endpoints
-│   ├──  POST /                        # Create Payment                ✅ (order_id, amount, method, status?) | [id, order_id]
-│   └──  PUT /{payment_id}             # Update Payment Status         ✅ (status) | [id, status]
+│   ├──  POST /                        # Create Payment                 (order_id, amount, method, status?) | [id, order_id]
+│   └──  PUT /{payment_id}             # Update Payment Status          (status) | [id, status]
 │
 └──  inventory                     # Inventory endpoints
-    ├──  GET /{product_id}            # Get Stock for Product        ✅ [product_id, quantity]
-    └──  POST /update                  # Update Stock                 ✅ (product_id, qty_change) | [product_id, quantity]
+    ├──  GET /{product_id}            # Get Stock for Product         [product_id, quantity]
+    └──  POST /update                  # Update Stock                  (product_id, qty_change) | [product_id, quantity]
