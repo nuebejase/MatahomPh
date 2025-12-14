@@ -43,5 +43,5 @@
 │   └──  PUT /{payment_id}             # Update Payment Status          (status) | [id, status]
 │
 └──  inventory                     # Inventory endpoints
-    ├──  GET /{product_id}            # Get Stock for Product         [product_id, quantity]
-    └──  POST /update                  # Update Stock                  (product_id, qty_change) | [product_id, quantity]
+    ├──  GET /{product_id}            # Get Stock for Product         ✅[product_id, quantity]
+    └──  POST /update                  # Update Stock                  ✅(product_id, qty_change) | [product_id, quantity]
