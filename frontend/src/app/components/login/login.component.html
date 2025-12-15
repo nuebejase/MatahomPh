@@ -1,33 +1,26 @@
-<div class="modal" *ngIf="isOpen">
-  <div class="modal-content">
-    <button class="close" (click)="closeModal()">&times;</button>
+<div class="login-page">
+  <div class="login-card">
+    <h2>Login to Your Account</h2>
 
-    <h2 class="modal-title">Login</h2>
-
-    <form (ngSubmit)="login()" class="modal-form">
-      <input type="text" name="email" placeholder="Email" [(ngModel)]="credentials.email" class="modal-input">
-
-      <!-- Password input with eye icon -->
-      <div class="password-wrapper">
-        <input
-          [type]="showPassword ? 'text' : 'password'"
-          name="password"
-          placeholder="Password"
-          [(ngModel)]="credentials.password"
-          class="modal-input">
-
-        <button type="button" class="show-password-btn" (click)="togglePassword()">
-          {{ showPassword ? '👁️' : '🙈' }}
-        </button>
+    <form (submit)="login(); $event.preventDefault()">
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required />
       </div>
 
+      <div>
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required />
+      </div>
 
-      <button type="submit" class="modal-btn">Login</button>
+      <button type="submit">Login</button>
     </form>
 
-    <p class="modal-footer">
-      Don't have an account?
-      <button (click)="openRegister()" class="modal-link">Sign up here</button>
-    </p>
+    <p>{{ message }}</p>
+
+    <div class="bottom-text">
+      <span>Don't have an account?</span>
+      <button (click)="goToRegister()">Register</button>
+    </div>
   </div>
 </div>

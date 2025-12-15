@@ -1,4 +1,3 @@
-import { NgIf, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import {  RouterModule } from '@angular/router';
 
@@ -6,7 +5,7 @@ import {  RouterModule } from '@angular/router';
   selector: 'app-product',
   templateUrl: './products.html',
   styleUrls: ['./products.css'],
-  imports: [ RouterModule, NgIf, NgFor],
+  imports: [ RouterModule, ],
 
 })
 export class ProductComponent {
