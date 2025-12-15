@@ -1,21 +1,20 @@
 <div class="min-h-screen flex flex-col bg-gradient-to-b from-[#faeef2] to-[#f7e6ec]">
 
   <!-- ===================== HEADER ===================== -->
-
-  <header class="header">
-    <div class="logo" >
-      <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
-      <div class="logo-texts">
-        <span class="logo-title">MatahomPH</span>
-        <span class="logo-subtitle">Beauty & Care</span>
-      </div>
+<header class="header">
+  <div class="logo" routerLink="/landing">
+    <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img" />
+    <div class="logo-texts">
+      <span class="logo-title">MatahomPH</span>
+      <span class="logo-subtitle">Beauty & Care</span>
     </div>
+  </div>
 
-    <div class="nav-profile-cart">
-      <!-- Cart Button -->
-      <button class="cart-btn" routerLink="/cart">🛒</button>
-    </div>
-  </header>
+  <div class="nav-profile-cart">
+    <button class="cart-btn" routerLink="/cart" type="button">🛒</button>
+  </div>
+</header>
+
 
 
   <section id="home-page">
@@ -34,10 +33,7 @@
             <p id="hero-subtitle">Curated essentials for glowing, effortless looks.</p>
           </div>
           <div class="hero-buttons">
-            <button id="home-cta-btn">
-              <span id="home-cta-text">Shop New Arrivals</span>
-              <span class="arrow">➝</span>
-            </button>
+            
             <button data-nav="catalog" routerLink="/products">Browse all beauty</button>
           </div>
           <div class="categories">
@@ -89,18 +85,40 @@
   </section>
 
 
-  <!-- ===================== PRODUCTS ===================== -->
-  <section id="products" class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
+ <!-- ===================== PRODUCTS ===================== -->
+<section id="products" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
 
-      <div class="flex items-center justify-between mb-10">
-        <h2 class="text-3xl font-semibold text-slate-800">Featured Products</h2>
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="text-3xl font-semibold text-slate-800">Featured Products</h2>
+    </div>
 
+    <!-- Featured Grid -->
+    <div class="featured-grid">
+      <div class="featured-card" *ngFor="let p of featuredProducts">
+        <div class="featured-img-wrap">
+          <img
+            class="featured-img"
+            [src]="p.image_url || 'assets/placeholder.png'"
+            [alt]="p.name"
+          />
+        </div>
+
+        <h3 class="featured-title">{{ p.name }}</h3>
+        <p class="featured-desc">{{ p.description }}</p>
+
+        <div class="featured-bottom">
+          <span class="featured-price">₱{{ p.price }}</span>
+          <div class="featured-actions">
+            
+          </div>
+        </div>
       </div>
+    </div>
 
+  </div>
+</section>
 
-
-      </div>
 
 
   <!-- ===================== FOOTER ===================== -->

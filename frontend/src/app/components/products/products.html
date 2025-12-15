@@ -1,47 +1,107 @@
 <div class="catalog-page">
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo" routerLink="/landing">
-      <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
-      <div class="logo-texts">
-        <span class="logo-title">MatahomPH</span>
-        <span class="logo-subtitle">Beauty & Care</span>
-      </div>
-    </div>
-    <div class="nav-profile-cart">
-      <button class="cart-btn" routerLink="/cart">🛒</button>
-    </div>
-  </header>
 
-  <!-- Section Title -->
-  <div class="section-title">
-    <h2>All Products</h2>
-    <p>Soft-focus colors and gentle care, curated for you.</p>
+
+  <!-- ===================== HEADER ===================== -->
+<header class="header">
+  <div class="logo" routerLink="/landing">
+    <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img" />
+    <div class="logo-texts">
+      <span class="logo-title">MatahomPH</span>
+      <span class="logo-subtitle">Beauty & Care</span>
+    </div>
   </div>
 
-  <!-- Search & Filters -->
-  <div class="search-filters">
-    <form id="search-form" class="search-form">
-      <label for="search-input" class="sr-only"></label>
+  <div class="nav-profile-cart">
+    <button class="cart-btn" routerLink="/cart" type="button">🛒</button>
+  </div>
+</header>
+
+
+
+  <!-- Title -->
+  <section class="hero">
+    <div class="hero-left">
+      <h2>All Products</h2>
+      <p>Soft-focus colors and gentle care, curated for you.</p>
+    </div>
+
+    <div class="hero-right">
+      <span class="count-pill">{{ filteredProducts.length }} items</span>
+    </div>
+  </section>
+
+  <!-- Search + Filters -->
+  <section class="controls">
+    <form class="searchbar" (submit)="$event.preventDefault()">
       <span class="search-icon">🔍</span>
-      <input id="search-input" name="search" type="text" placeholder="Search for lip tints, serums, routines...">
-      <button type="submit" class="search-btn">Search</button>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search for lip tints, serums, routines..."
+        [(ngModel)]="searchTerm"
+        name="search"
+        (ngModelChange)="onSearch(searchTerm)"
+      />
+     
     </form>
 
-    <div class="filter-buttons">
-      <button type="button" class="filter-chip active" data-filter="all">All</button>
-      <button type="button" class="filter-chip" data-filter="Makeup">Makeup</button>
-      <button type="button" class="filter-chip" data-filter="Skin Care">Skin Care</button>
-      <button type="button" class="filter-chip" data-filter="Body Care">Body Care</button>
+    <div class="chips">
+      <button type="button" class="chip" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">All</button>
+      <button type="button" class="chip" [class.active]="activeFilter === 'Makeup'" (click)="setFilter('Makeup')">Makeup</button>
+      <button type="button" class="chip" [class.active]="activeFilter === 'Skincare'" (click)="setFilter('Skincare')">Skin Care</button>
+      <button type="button" class="chip" [class.active]="activeFilter === 'Body Care'" (click)="setFilter('Body Care')">Body Care</button>
+      <button type="button" class="chip" [class.active]="activeFilter === 'Fragrance'" (click)="setFilter('Fragrance')">Fragrance</button>
+       <button type="button" class="chip" [class.active]="activeFilter === 'Hair Care'" (click)="setFilter('Hair Care')">Hair Care</button>
     </div>
-  </div>
+  </section>
 
-  <!-- Product Grid -->
-  <div class="product-grid" id="catalog-grid">
-    <!-- Dynamic product cards will go here -->
-  </div>
+  <!-- Status -->
+  <p class="status" *ngIf="loading">Loading products...</p>
+  <p class="status error" *ngIf="errorMsg">{{ errorMsg }}</p>
 
-  <p id="catalog-empty" class="empty-msg">No products match your search. Try clearing filters.</p>
+  <!-- Grid -->
+  <section class="grid">
+    <article class="card" *ngFor="let p of filteredProducts">
+      <div class="img-wrap">
+        <img
+          class="product-img"
+          [src]="p.image_url || 'assets/placeholder.png'"
+          [alt]="p.name || 'Product'"
+        />
+      </div>
+
+      <!-- optional: category label (if you have p.category_name) -->
+      <div class="meta-row">
+        <span class="title">{{ p.name }}</span>
+        <span class="category">{{ p.category_name || '' }}</span>
+      </div>
+
+      <p class="desc">{{ p.description }}</p>
+
+      <div class="price-row">
+        <span class="price">₱{{ p.price }}</span>
+        <!-- optional old price if you have p.old_price -->
+        <span class="old" *ngIf="p.old_price">₱{{ p.old_price }}</span>
+
+        <!-- optional badge if you have p.badge -->
+        <span class="badge" *ngIf="p.badge">{{ p.badge }}</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn-view" type="button" (click)="addToOrder(p)">Add</button>
+       
+      </div>
+    </article>
+  </section>
+
+  <p class="empty" *ngIf="!loading && !errorMsg && (filteredProducts?.length || 0) === 0">
+    No products match your search. Try clearing filters.
+  </p>
+
+  <footer class="footer">
+    <div>© 2025 Matahom Beauty. All rights reserved.</div>
+    
+  </footer>
 
 </div>

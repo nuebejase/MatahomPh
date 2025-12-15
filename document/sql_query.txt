@@ -1,4 +1,5 @@
 Matahom: Beauty and Personal Care Store
+DB Name: matahomph_db
 
 MYSQL QUERY
 1. USERS TABLE

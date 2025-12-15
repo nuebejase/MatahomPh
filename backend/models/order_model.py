@@ -10,7 +10,7 @@ class Order(db.Model):
 
     total_amount = db.Column(db.Numeric(10, 2), nullable=False)
     status = db.Column(db.Enum("pending", "shipped", "delivered", "cancelled"), default="pending")
-    shipping_address = db.Column(db.String(255))
+    shipping_address = db.Column(db.String(255), nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     items = db.relationship("OrderItem", backref="order", lazy=True)

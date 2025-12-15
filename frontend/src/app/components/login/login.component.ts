@@ -17,19 +17,23 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  login() {
-    this.authService.login(this.email, this.password)
-      .subscribe({
-        next: (res) => {
-          this.message = res.message;
-          this.user = res.user;
+ login() {
+  this.authService.login(this.email, this.password)
+    .subscribe({
+      next: (res) => {
+        this.message = res.message;
+        this.user = res.user;
 
-          // Redirect to home or dashboard after login
-          // this.router.navigate(['/dashboard']);
-        },
-        error: (err) => this.message = err.error.error
-      });
-  }
+        // ✅ store logged-in user_id (adjust key if needed)
+        localStorage.setItem('user_id', String(res.user.user_id));
+
+        // Redirect
+        this.router.navigate(['/landing']);
+      },
+      error: (err) => this.message = err.error.error
+    });
+}
+
 
   goToRegister() {
     this.router.navigate(['/register']); // Make sure you have a Register route

@@ -3,6 +3,7 @@ from flask_cors import CORS
 from models import db
 from routes import all_blueprints
 from config import Config
+from routes.auth_routes import auth_bp
 
 # JWT
 from flask_jwt_extended import JWTManager
@@ -17,7 +18,7 @@ def create_app():
     app.config.from_pyfile("config.py", silent=True)
 
     # Enable CORS for Angular frontend
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(app, resources={r"/auth/*": {"origins": "http://localhost:4200"}})
 
     # Initialize extensions
     db.init_app(app)
@@ -25,8 +26,9 @@ def create_app():
 
     # Register all blueprints under /api prefix
     for bp in all_blueprints:
-        app.register_blueprint(bp, url_prefix="/api")
-
+        
+        app.register_blueprint(bp, url_prefix="/auth")
+      
     @app.route("/")
     def root():
         return {"message": "Matahom API is running"}

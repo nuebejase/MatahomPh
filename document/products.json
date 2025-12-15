@@ -1,94 +1,203 @@
 [
   {
-    "product_id": 1,
     "category_id": 1,
-    "name": "Gentle Facial Cleanser",
-    "description": "Mild cleanser suitable for all skin types.",
-    "price": 299.00,
-    "stock": 50,
-    "image_url": "https://www.watsons.com.ph/cetaphil-gentle-skin-cleanser-473-ml/p/BP_10081407"
-  },
-  {
-    "product_id": 2,
-    "category_id": 1,
-    "name": "Hydrating Toner",
-    "description": "Alcohol-free toner for daily hydration.",
-    "price": 399.00,
+    "name": "CeraVe Hydrating Facial Cleanser",
+    "description": "Gentle, non-foaming cleanser that hydrates and restores the skin barrier.",
+    "price": 650.00,
     "stock": 40,
-    "image_url": "https://www.cerave.com/skincare/cleansers/hydrating-toner"
+    "image_url": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/cleansers/hydrating-facial-cleanser/photos/2025/hydrating-facial-cleanser_front.jpg?rev=0dbda3ea882842279d59341505ad4a93&w=900&hash=3D916FF592FE619D485851D27C485306"
   },
   {
-    "product_id": 3,
     "category_id": 1,
-    "name": "Vitamin C Serum",
-    "description": "Brightening serum with antioxidant protection.",
+    "name": "COSRX Low pH Good Morning Gel Cleanser",
+    "description": "Low pH cleanser that gently removes impurities while maintaining skin balance.",
+    "price": 520.00,
+    "stock": 35,
+    "image_url": "https://commalax.ph/cdn/shop/products/Untitled-1_aabfcd35-57df-4495-99ff-3f85a3107cf9.jpg?v=1675756746&width=1200"
+  },
+  {
+    "category_id": 1,
+    "name": "The Ordinary Niacinamide 10% + Zinc 1%",
+    "description": "Serum that helps reduce blemishes and balance visible sebum activity.",
+    "price": 620.00,
+    "stock": 30,
+    "image_url": "https://i5.walmartimages.com/seo/The-Ordinary-Niacinamide-10-Zinc-1-120-ML-4-OZ-NEW-Extra-Large_65a7da47-0b72-4278-a792-5d040f3c2078.b2523c07fe2883de9799b51307bd7659.jpeg"
+  },
+  {
+    "category_id": 1,
+    "name": "Neutrogena Hydro Boost Water Gel",
+    "description": "Lightweight gel moisturizer with hyaluronic acid for intense hydration.",
+    "price": 780.00,
+    "stock": 25,
+    "image_url": "https://static.beautytocare.com/cdn-cgi/image/width=1440,height=1200,f=auto/media/catalog/product//n/e/neutrogena-hydro-boost-water-gel-50ml_6.jpg"
+  },
+  {
+    "category_id": 1,
+    "name": "La Roche-Posay Anthelios Invisible Fluid SPF 50+",
+    "description": "Broad-spectrum sunscreen with lightweight, non-greasy finish.",
+    "price": 980.00,
+    "stock": 20,
+    "image_url": "https://d3pllp7nz3wmw5.cloudfront.net/product_images/27735308101_XL.jpg"
+  },
+  {
+    "category_id": 2,
+    "name": "Pantene Pro-V Total Damage Care Shampoo",
+    "description": "Nourishing shampoo that helps repair and protect damaged hair.",
+    "price": 480.00,
+    "stock": 50,
+    "image_url": "https://medias.watsons.com.ph/publishing/PTN_Image2_50026311-5jSwM4cg-zoom.png?version=1763280125"
+  },
+  {
+    "category_id": 2,
+    "name": "Cream Silk Triple Keratin Rescue Conditioner",
+    "description": "Conditioner formulated with keratin to strengthen and smooth hair.",
+    "price": 520.00,
+    "stock": 45,
+    "image_url": "https://assets.tryandreview.com/uploads/images/products/d7bb4296283fc2f689967e05d75e59a8a3f10d27.png"
+  },
+  {
+    "category_id": 2,
+    "name": "L’Oréal Elseve Extraordinary Oil Hair Serum",
+    "description": "Lightweight hair serum that adds shine and controls frizz.",
+    "price": 650.00,
+    "stock": 30,
+    "image_url": "https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//l/-/l-oreal-paris-elvive-extraordinary-oil-serum-100ml.jpg"
+  },
+  {
+    "category_id": 2,
+    "name": "TRESemmé Keratin Smooth Hair Mask",
+    "description": "Deep conditioning hair mask for smoother, more manageable hair.",
+    "price": 720.00,
+    "stock": 25,
+    "image_url": "https://m.media-amazon.com/images/I/51+Td55XX7L._SL1000_.jpg"
+  },
+  {
+    "category_id": 2,
+    "name": "Dove Intense Repair Shampoo",
+    "description": "Repairing shampoo that nourishes and strengthens weak hair.",
+    "price": 450.00,
+    "stock": 55,
+    "image_url": "https://assets.unileversolutions.com/v1/81937947.jpg"
+  },
+  {
+    "category_id": 3,
+    "name": "Dove Sensitive Skin Beauty Bar",
+    "description": "Gentle cleansing bar suitable for sensitive skin.",
+    "price": 95.00,
+    "stock": 120,
+    "image_url": "https://images-cdn.ubuy.co.id/633e8ee9f1403d10ed78479c-dove-beauty-bar-for-softer-skin.jpg"
+  },
+  {
+    "category_id": 3,
+    "name": "Nivea Intensive Moisture Body Lotion",
+    "description": "Deeply moisturizing lotion for dry skin.",
+    "price": 320.00,
+    "stock": 60,
+    "image_url": "https://img.nivea.com/-/media/miscellaneous/media-center-items/b/d/7/377718-screen.tif"
+  },
+  {
+    "category_id": 3,
+    "name": "St. Ives Fresh Skin Apricot Scrub",
+    "description": "Exfoliating body scrub for smooth skin.",
+    "price": 290.00,
+    "stock": 45,
+    "image_url": "https://medias.watsons.com.ph/publishing/WTCPH-50040155-back-zoom.jpg?version=1721935942"
+  },
+  {
+    "category_id": 3,
+    "name": "Cetaphil Gentle Cleansing Bar",
+    "description": "Soap-free cleansing bar for sensitive skin.",
+    "price": 180.00,
+    "stock": 80,
+    "image_url": "https://k2pharmacy.ph/cdn/shop/files/Cetaphil_GentleCleansingAntibacterialBar127g-fotor-2024070414336_grande.jpg?v=1720595807"
+  },
+  {
+    "category_id": 3,
+    "name": "Vaseline Healthy Bright Lotion",
+    "description": "Daily body lotion for brighter-looking skin.",
+    "price": 260.00,
+    "stock": 70,
+    "image_url": "https://rejuvenatingsets.com/wp-content/uploads/2024/11/Vaseline-Healthy-Bright-UV-Extra-Brightening-Lotion-200ml.png"
+  },
+  {
+    "category_id": 4,
+    "name": "Maybelline SuperStay Matte Ink Lipstick",
+    "description": "Long-lasting liquid lipstick with matte finish.",
+    "price": 399.00,
+    "stock": 50,
+    "image_url": "https://www.maybelline.com.ph/-/media/project/loreal/brand-sites/mny/apac/ph/products/others/lips/lipstick/liquid-lipstick/superstay-matte-ink-pink-edition/maybelline-lips-liquid-lipstick-superstay-matte-ink-pink-edition-150-savant-product.jpg?rev=9bbffbfc0656405ba4b19c7e41106355"
+  },
+  {
+    "category_id": 4,
+    "name": "L’Oréal Infallible 24H Fresh Wear Foundation",
+    "description": "Lightweight foundation with full coverage.",
     "price": 699.00,
     "stock": 30,
-    "image_url": "https://www.ubuy.com.ph/product/1RI9GFQ-la-roche-posay-pure-vitamin-c-face-serum-with-hyaluronic-acid-salicylic-acid-anti-aging-face-serum-for-wrinkles-uneven-skin-texture-to-visibly-brighte?srsltid=AfmBOorR18ImoX8XKaV0lrmOc6kT_PQtiDcn9tZXTLuma08oK3cxtIeI"
+    "image_url": "https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//l/-/l-oreal-paris-infallible-24h-foundation-20-ivory-30ml_3.jpg"
   },
   {
-    "product_id": 4,
-    "category_id": 1,
-    "name": "Daily Moisturizer",
-    "description": "Lightweight moisturizer for all-day hydration.",
-    "price": 499.00,
-    "stock": 45,
-    "image_url": "https://ph.iherb.com/pr/vanicream-daily-facial-moisturizer-for-sensitive-skin-fragrance-free-3-fl-oz-89-ml/108535"
-  },
-  {
-    "product_id": 5,
-    "category_id": 1,
-    "name": "Sunscreen SPF 50",
-    "description": "Broad-spectrum UV protection.",
-    "price": 550.00,
-    "stock": 35,
-    "image_url": "https://www.watsons.com.ph/ponds-hyaluron-sunscreen-spf50-pa-uv-hydrate-50ml/p/BP_50043299"
-  },
-
-  {
-    "product_id": 6,
-    "category_id": 2,
-    "name": "Herbal Shampoo",
-    "description": "Natural shampoo for healthy hair.",
-    "price": 399.00,
-    "stock": 60,
-    "image_url": "https://ph.iherb.com/pr/herbal-essences-smooth-shampoo-rose-hips-13-5-fl-oz-400-ml/100361"
-  },
-  {
-    "product_id": 7,
-    "category_id": 2,
-    "name": "Repair Conditioner",
-    "description": "Strengthens and smoothens damaged hair.",
-    "price": 420.00,
+    "category_id": 4,
+    "name": "Fit Me Matte + Poreless Powder",
+    "description": "Oil-controlling face powder for smooth finish.",
+    "price": 299.00,
     "stock": 55,
-    "image_url": "https://www.hairmnl.com/products/loreal-serie-expert-absolut-repair-gold-conditioner?srsltid=AfmBOooa_2MVal_SuVVGFbZOAamuFzF9aTt0YRCtjxki-bmdIzGT4Sf5"
+    "image_url": "https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//m/a/maybelline-fit-me-matte-poreless-powder-130-buff-beige-8-5g.jpg"
   },
   {
-    "product_id": 8,
-    "category_id": 2,
-    "name": "Hair Mask",
-    "description": "Deep conditioning hair treatment.",
-    "price": 580.00,
-    "stock": 25,
-    "image_url": "https://www.ubuy.com.ph/product/4KZ6U84SM-tresemme-keratin-smooth-mask-for-frizzy-and-difficult-to-manage-hair-300-ml?srsltid=AfmBOorR6Usq9pJAG_R8sNWWQ3Q7NoFhwDfpHlyZmHrPp2FMVzC9obYk"
-  },
-  {
-    "product_id": 9,
-    "category_id": 2,
-    "name": "Hair Serum",
-    "description": "Anti-frizz leave-on serum.",
-    "price": 480.00,
+    "category_id": 4,
+    "name": "EB Advance Lash Define Mascara",
+    "description": "Mascara that defines and lengthens lashes.",
+    "price": 225.00,
     "stock": 40,
-    "image_url": "https://moringa-o2.com/product/hair-relaxing-serum-with-argan-oil/"
+    "image_url": "https://theskincarelibrary.com/cdn/shop/files/EverBilenaProLashDefineWaterproofMascara_800x.jpg?v=1707069609"
   },
   {
-    "product_id": 10,
-    "category_id": 2,
-    "name": "Dry Shampoo",
-    "description": "Instant refresh for oily hair.",
-    "price": 350.00,
+    "category_id": 4,
+    "name": "Careline Oil Control Blush",
+    "description": "Lightweight blush with oil-control formula.",
+    "price": 199.00,
     "stock": 45,
-    "image_url": "https://www.palmolive.ph/products-range/naturals/fresh-volume-dry"
+    "image_url": "https://ph-test-11.slatic.net/p/52d0532002ef65a7efc59bac92362ec5.jpg"
+  },
+  {
+    "category_id": 5,
+    "name": "Victoria’s Secret Bombshell Eau de Parfum",
+    "description": "Floral-fruity fragrance with a bold, feminine scent.",
+    "price": 3500.00,
+    "stock": 10,
+    "image_url": "https://www.perfumestudiomnl.com/cdn/shop/files/23C20537-5E57-4C7D-9995-5AB0E6F74584.jpg?v=1720250793"
+  },
+  {
+    "category_id": 5,
+    "name": "Calvin Klein CK One",
+    "description": "Fresh and clean unisex fragrance for everyday wear.",
+    "price": 2800.00,
+    "stock": 12,
+    "image_url": "https://rustans.com/cdn/shop/files/0028_calvin_klein-2775340.jpg?v=1690454692&width=1400"
+  },
+  {
+    "category_id": 5,
+    "name": "Bath & Body Works Japanese Cherry Blossom Body Mist",
+    "description": "Light floral body mist for daily freshness.",
+    "price": 950.00,
+    "stock": 30,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXGa06yB5xmtTECKW4lyT8MLZdrSGuwx33GQ&s"
+  },
+  {
+    "category_id": 5,
+    "name": "Axe Apollo Deodorant Body Spray",
+    "description": "Long-lasting odor protection with a fresh scent.",
+    "price": 280.00,
+    "stock": 70,
+    "image_url": "https://images-cdn.ubuy.co.in/65fc32b8a81f7b42ea657f7b-axe-apollo-mens-deodorant-body-spray.jpg"
+  },
+  {
+    "category_id": 5,
+    "name": "Davidoff Cool Water Eau de Toilette",
+    "description": "Refreshing aquatic fragrance with a masculine scent.",
+    "price": 3200.00,
+    "stock": 15,
+    "image_url": "https://www.perfumes.com.ph/cdn/shop/files/davidoff-cool-water-men-125ml-perfume-philippines-best-price.webp?v=1743843472"
   }
 
 ]

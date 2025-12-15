@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="nav-profile-cart">
-      <button class="cart-btn">🛒</button>
+      <button class="cart-btn" routerLink="/cart" type="button">🛒</button>
     </div>
   </header>
 
@@ -21,7 +21,7 @@
         <h1 id="cart-title">Your Matahom Cart</h1>
         <p class="subtitle">Review your picks before checking out.</p>
       </div>
-      <button type="button" data-nav="catalog" class="continue-shopping-btn" routerLink="/products">
+      <button type="button" class="continue-shopping-btn" routerLink="/products">
         Continue shopping
       </button>
     </div>
@@ -29,23 +29,59 @@
     <div class="cart-grid">
       <!-- Cart Items -->
       <section class="cart-items">
-        <div id="cart-list" class="items-list"></div>
-        <p id="cart-empty" class="empty-msg">Your cart is empty. Add something lovely from the shop.</p>
+        <!-- Loading / Error -->
+        <p *ngIf="loading">Loading cart...</p>
+        <p *ngIf="errorMsg">{{ errorMsg }}</p>
+
+        <!-- Items List -->
+        <div id="cart-list" class="items-list" *ngIf="!loading && !errorMsg && orders.length > 0">
+          <div class="cart-item" *ngFor="let o of orders">
+            <div class="item-info">
+              <p class="item-name">Order #{{ o.id }}</p>
+              <p class="item-meta">Status: {{ o.status }}</p>
+              <p class="item-meta">Ship to: {{ o.shipping_address }}</p>
+            </div>
+
+            <div class="item-price">
+              ₱{{ o.total_amount }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty Message -->
+        <p id="cart-empty" class="empty-msg" *ngIf="!loading && !errorMsg && orders.length === 0">
+          Your cart is empty. Add something lovely from the shop.
+        </p>
       </section>
 
       <!-- Order Summary -->
       <aside class="order-summary">
         <h2>Summary</h2>
         <div class="summary-details">
-          <div class="line"><span>Subtotal</span><span id="summary-subtotal">₱0.00</span></div>
+          <div class="line">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">₱{{ subtotal | number:'1.2-2' }}</span>
+          </div>
           <div class="line"><span>Shipping</span><span>Calculated at checkout</span></div>
           <div class="line"><span>Estimated tax</span><span>Included</span></div>
           <hr>
-          <div class="line total"><span>Total</span><span id="summary-total">₱0.00</span></div>
+          <div class="line total">
+            <span>Total</span>
+            <span id="summary-total">₱{{ subtotal | number:'1.2-2' }}</span>
+          </div>
         </div>
-        <button id="cart-checkout-btn">Proceed to checkout</button>
+
+        <button id="cart-checkout-btn" type="button" (click)="checkout()">
+          Proceed to checkout
+        </button>
+
         <p class="note">This is a demo flow—no real payments will be processed.</p>
       </aside>
     </div>
   </section>
 </div>
+
+<!-- Footer -->
+<footer class="py-6 text-center text-sm text-slate-500 border-t border-pink-200">
+  © 2025 Matahom Beauty. All rights reserved.
+</footer>

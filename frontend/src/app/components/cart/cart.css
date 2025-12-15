@@ -1,3 +1,4 @@
+
 /* ===================== CART PAGE ===================== */
 .cart-page {
   font-family: 'Poppins', sans-serif;
@@ -182,4 +183,10 @@
   .order-summary {
     width: 100%;
   }
+}
+/* ===================== FOOTER ===================== */
+footer {
+  background: transparent;
+  color: #8a6b76;
+  border-top: 1px solid #f0cbd8;
 }
