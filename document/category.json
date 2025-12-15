@@ -1,0 +1,27 @@
+[
+  {
+    "category_id": 1,
+    "name": "Skincare",
+    "description": "Facial and skin care products including cleansers, toners, serums, and moisturizers."
+  },
+  {
+    "category_id": 2,
+    "name": "Hair Care",
+    "description": "Hair maintenance products such as shampoos, conditioners, masks, and serums."
+  },
+  {
+    "category_id": 3,
+    "name": "Body Care",
+    "description": "Personal hygiene and body care products including soaps, lotions, and scrubs."
+  },
+  {
+    "category_id": 4,
+    "name": "Makeup",
+    "description": "Cosmetic products such as lipsticks, foundations, powders, and eye makeup."
+  },
+  {
+    "category_id": 5,
+    "name": "Fragrance",
+    "description": "Perfumes, colognes, body mists, and deodorants."
+  }
+]

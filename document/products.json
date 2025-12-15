@@ -1,0 +1,94 @@
+[
+  {
+    "product_id": 1,
+    "category_id": 1,
+    "name": "Gentle Facial Cleanser",
+    "description": "Mild cleanser suitable for all skin types.",
+    "price": 299.00,
+    "stock": 50,
+    "image_url": "https://example.com/images/skincare/facial_cleanser.jpg"
+  },
+  {
+    "product_id": 2,
+    "category_id": 1,
+    "name": "Hydrating Toner",
+    "description": "Alcohol-free toner for daily hydration.",
+    "price": 399.00,
+    "stock": 40,
+    "image_url": "https://example.com/images/skincare/toner.jpg"
+  },
+  {
+    "product_id": 3,
+    "category_id": 1,
+    "name": "Vitamin C Serum",
+    "description": "Brightening serum with antioxidant protection.",
+    "price": 699.00,
+    "stock": 30,
+    "image_url": "https://example.com/images/skincare/vitamin_c_serum.jpg"
+  },
+  {
+    "product_id": 4,
+    "category_id": 1,
+    "name": "Daily Moisturizer",
+    "description": "Lightweight moisturizer for all-day hydration.",
+    "price": 499.00,
+    "stock": 45,
+    "image_url": "https://example.com/images/skincare/moisturizer.jpg"
+  },
+  {
+    "product_id": 5,
+    "category_id": 1,
+    "name": "Sunscreen SPF 50",
+    "description": "Broad-spectrum UV protection.",
+    "price": 550.00,
+    "stock": 35,
+    "image_url": "https://example.com/images/skincare/sunscreen.jpg"
+  },
+
+  {
+    "product_id": 6,
+    "category_id": 2,
+    "name": "Herbal Shampoo",
+    "description": "Natural shampoo for healthy hair.",
+    "price": 399.00,
+    "stock": 60,
+    "image_url": "https://example.com/images/haircare/herbal_shampoo.jpg"
+  },
+  {
+    "product_id": 7,
+    "category_id": 2,
+    "name": "Repair Conditioner",
+    "description": "Strengthens and smoothens damaged hair.",
+    "price": 420.00,
+    "stock": 55,
+    "image_url": "https://example.com/images/haircare/conditioner.jpg"
+  },
+  {
+    "product_id": 8,
+    "category_id": 2,
+    "name": "Hair Mask",
+    "description": "Deep conditioning hair treatment.",
+    "price": 580.00,
+    "stock": 25,
+    "image_url": "https://example.com/images/haircare/hair_mask.jpg"
+  },
+  {
+    "product_id": 9,
+    "category_id": 2,
+    "name": "Hair Serum",
+    "description": "Anti-frizz leave-on serum.",
+    "price": 480.00,
+    "stock": 40,
+    "image_url": "https://example.com/images/haircare/hair_serum.jpg"
+  },
+  {
+    "product_id": 10,
+    "category_id": 2,
+    "name": "Dry Shampoo",
+    "description": "Instant refresh for oily hair.",
+    "price": 350.00,
+    "stock": 45,
+    "image_url": "https://example.com/images/haircare/dry_shampoo.jpg"
+  }
+
+]
