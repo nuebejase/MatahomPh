@@ -1,0 +1,94 @@
+[
+  {
+    "product_id": 1,
+    "category_id": 1,
+    "name": "Gentle Facial Cleanser",
+    "description": "Mild cleanser suitable for all skin types.",
+    "price": 299.00,
+    "stock": 50,
+    "image_url": "https://www.watsons.com.ph/cetaphil-gentle-skin-cleanser-473-ml/p/BP_10081407"
+  },
+  {
+    "product_id": 2,
+    "category_id": 1,
+    "name": "Hydrating Toner",
+    "description": "Alcohol-free toner for daily hydration.",
+    "price": 399.00,
+    "stock": 40,
+    "image_url": "https://www.cerave.com/skincare/cleansers/hydrating-toner"
+  },
+  {
+    "product_id": 3,
+    "category_id": 1,
+    "name": "Vitamin C Serum",
+    "description": "Brightening serum with antioxidant protection.",
+    "price": 699.00,
+    "stock": 30,
+    "image_url": "https://www.ubuy.com.ph/product/1RI9GFQ-la-roche-posay-pure-vitamin-c-face-serum-with-hyaluronic-acid-salicylic-acid-anti-aging-face-serum-for-wrinkles-uneven-skin-texture-to-visibly-brighte?srsltid=AfmBOorR18ImoX8XKaV0lrmOc6kT_PQtiDcn9tZXTLuma08oK3cxtIeI"
+  },
+  {
+    "product_id": 4,
+    "category_id": 1,
+    "name": "Daily Moisturizer",
+    "description": "Lightweight moisturizer for all-day hydration.",
+    "price": 499.00,
+    "stock": 45,
+    "image_url": "https://ph.iherb.com/pr/vanicream-daily-facial-moisturizer-for-sensitive-skin-fragrance-free-3-fl-oz-89-ml/108535"
+  },
+  {
+    "product_id": 5,
+    "category_id": 1,
+    "name": "Sunscreen SPF 50",
+    "description": "Broad-spectrum UV protection.",
+    "price": 550.00,
+    "stock": 35,
+    "image_url": "https://www.watsons.com.ph/ponds-hyaluron-sunscreen-spf50-pa-uv-hydrate-50ml/p/BP_50043299"
+  },
+
+  {
+    "product_id": 6,
+    "category_id": 2,
+    "name": "Herbal Shampoo",
+    "description": "Natural shampoo for healthy hair.",
+    "price": 399.00,
+    "stock": 60,
+    "image_url": "https://ph.iherb.com/pr/herbal-essences-smooth-shampoo-rose-hips-13-5-fl-oz-400-ml/100361"
+  },
+  {
+    "product_id": 7,
+    "category_id": 2,
+    "name": "Repair Conditioner",
+    "description": "Strengthens and smoothens damaged hair.",
+    "price": 420.00,
+    "stock": 55,
+    "image_url": "https://www.hairmnl.com/products/loreal-serie-expert-absolut-repair-gold-conditioner?srsltid=AfmBOooa_2MVal_SuVVGFbZOAamuFzF9aTt0YRCtjxki-bmdIzGT4Sf5"
+  },
+  {
+    "product_id": 8,
+    "category_id": 2,
+    "name": "Hair Mask",
+    "description": "Deep conditioning hair treatment.",
+    "price": 580.00,
+    "stock": 25,
+    "image_url": "https://www.ubuy.com.ph/product/4KZ6U84SM-tresemme-keratin-smooth-mask-for-frizzy-and-difficult-to-manage-hair-300-ml?srsltid=AfmBOorR6Usq9pJAG_R8sNWWQ3Q7NoFhwDfpHlyZmHrPp2FMVzC9obYk"
+  },
+  {
+    "product_id": 9,
+    "category_id": 2,
+    "name": "Hair Serum",
+    "description": "Anti-frizz leave-on serum.",
+    "price": 480.00,
+    "stock": 40,
+    "image_url": "https://moringa-o2.com/product/hair-relaxing-serum-with-argan-oil/"
+  },
+  {
+    "product_id": 10,
+    "category_id": 2,
+    "name": "Dry Shampoo",
+    "description": "Instant refresh for oily hair.",
+    "price": 350.00,
+    "stock": 45,
+    "image_url": "https://www.palmolive.ph/products-range/naturals/fresh-volume-dry"
+  }
+
+]
