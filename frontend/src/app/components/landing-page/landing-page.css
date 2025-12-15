@@ -1,0 +1,85 @@
+/* ===================== MAIN LAYOUT ===================== */
+:host {
+  font-family: 'Poppins', sans-serif;
+  color: #3a2d33;
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faeef2 0%, #f7e6ec 100%);
+  }
+
+
+  /* ===================== HEADER ===================== */
+  header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #f0cbd8;
+  }
+
+
+  header img {
+  width: 44px;
+  border-radius: 50%;
+  }
+
+
+  header span {
+  font-weight: 600;
+  color: #2f2a2d;
+  }
+
+
+  header a {
+  color: #b44c73;
+  font-weight: 500;
+  transition: 0.3s;
+  }
+
+
+  header a:hover {
+  color: #d0668c;
+  }
+
+
+  /* ===================== BUTTONS ===================== */
+  button {
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  }
+
+
+  button:hover {
+  transform: translateY(-1px);
+  }
+
+
+  /* ===================== HERO ===================== */
+  section {
+  background: transparent;
+  }
+
+
+  section h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: #2f2a2d;
+  }
+
+
+  section h1 span {
+  color: #d0668c;
+  }
+
+
+  section p {
+  color: #6b5560;
+  }
+
+
+  section img {
+  max-height: 420px;
+  object-fit: contain;
+  }
+
+
+  /* ===================== PRODUCT GRID ===================== */

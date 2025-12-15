@@ -1,0 +1,203 @@
+/* ===== Page Layout ===== */
+.dashboard-container {
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+}
+
+/* ===== Header ===== */
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* ===== Summary Cards ===== */
+.summary-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Tabs ===== */
+.tabs nav {
+  display: flex;
+  gap: 0.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}
+
+.tabs nav button {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.tabs nav button:hover {
+  background: #f3f4f6;
+}
+
+.tabs nav .active {
+  border-bottom: 3px solid #3b82f6;
+  color: #3b82f6 !important;
+  font-weight: 600;
+}
+
+/* ===== Add New Product Button ===== */
+.add-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.add-btn:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #9ca3af;
+}
+
+.empty-state .icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Tables (Generic for all tabs) ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+thead {
+  background: #f3f4f6;
+}
+
+th {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+td {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+  transition: background 0.2s;
+}
+
+/* ===== USERS TAB SPECIFIC STYLES ===== */
+
+.user-action-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+.user-view-btn {
+  background: #10b981;
+  color: white;
+}
+
+.user-view-btn:hover {
+  background: #059669;
+}
+
+.user-delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.user-delete-btn:hover {
+  background: #dc2626;
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 768px) {
+  table {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+}
