@@ -15,6 +15,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+openLogin() {
+throw new Error('Method not implemented.');
+}
 
   @Output() close = new EventEmitter<void>();
   @Output() switchToRegister = new EventEmitter<void>();

@@ -1,0 +1,162 @@
+
+/* ===================== MAIN LAYOUT ===================== */
+:host {
+  font-family: 'Poppins', sans-serif;
+  color: #3a2d33;
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #faeef2 0%, #f7e6ec 100%);
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #faeef2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.nav-profile-cart {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #eceee6ea;
+  transform: scale(1.1);
+}
+
+/* Profile + Cart + Orders */
+.profile-cart {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+.logbtn,
+.cart-btn,
+.order-btn {
+  background-color: #e4cad3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.logbtn:hover,
+.cart-btn:hover,
+.order-btn:hover {
+  background-color: #e7ced7;
+  transform: scale(1.1);
+}
+/* Container */
+#home-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero wrapper as two columns */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Hero text (left) */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text .new-collection {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.hero-text .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #75D69C;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.hero-text h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.hero-text p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.hero-buttons button {
+  margin-right: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #C2688C;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.hero-buttons button#home-cta-btn {
+  font-weight: 500;
+}

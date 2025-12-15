@@ -4,7 +4,7 @@ import { LandingPage } from './components/landing-page/landing-page';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { Profile } from './components/profile/profile';
-import { ProductsComponent } from './components/admin/products/products.component';
+import { ProductComponent } from './components/products/products';
 import { AdminPage } from './components/admin/admin';
 import { AdminGuard } from './guards/admin-guard';
 import { CheckoutComponent } from './components/checkout/checkout';
@@ -16,9 +16,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },    // login page
   { path: 'register', component: RegisterComponent }, // register page
   {path: 'profile', component: Profile}, // profile page
-  {path: 'products', component: ProductsComponent}, // products page
-  {path: 'checkout', component: CheckoutComponent}, // checkout page
-  { path: 'admin/add-product', component: ProductsComponent },
+  {path: 'products', component: ProductComponent}, // products page
   { path: 'admin', component: AdminPage, canActivate: [AdminGuard] },
 ];
 
