@@ -1,0 +1,35 @@
+<div class="modal" *ngIf="isOpen">
+  <div class="modal-content">
+    <button class="close" (click)="closeModal()">&times;</button>
+
+    <h2 class="modal-title">Register</h2>
+
+    <form (ngSubmit)="register()" class="modal-form">
+      <input type="text" name="full_name" placeholder="Full Name" [(ngModel)]="userData.full_name" class="modal-input">
+      <input type="email" name="email" placeholder="Email" [(ngModel)]="userData.email" class="modal-input">
+      <input type="text" name="username" placeholder="Username" [(ngModel)]="userData.username" class="modal-input">
+
+      <!-- Password field with show/hide -->
+      <div class="password-wrapper">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="userData.password"
+          class="modal-input">
+        <button type="button" class="show-password-btn" (click)="togglePassword()">
+          {{ showPassword ? '👁️' : '🙈' }}
+        </button>
+      </div>
+
+      <input type="text" name="contact_number" placeholder="Contact Number" [(ngModel)]="userData.contact_number" class="modal-input">
+      <input type="text" name="address" placeholder="Address" [(ngModel)]="userData.address" class="modal-input">
+      <button type="submit" class="modal-btn">Register</button>
+    </form>
+
+    <p class="modal-footer">
+      Already have an account?
+      <button (click)="openLogin()" class="modal-link">Login here</button>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="cart-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo" routerLink="/">
+      <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
+      <div class="logo-texts">
+        <span class="logo-title">MatahomPH</span>
+        <span class="logo-subtitle">Beauty & Care</span>
+      </div>
+    </div>
+    <div class="nav-profile-cart">
+      <button class="cart-btn">🛒</button>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section id="cart-page" class="container" aria-label="Shopping cart">
+    <div class="cart-header flex items-center justify-between">
+      <div>
+        <h1 id="cart-title">Your Matahom Cart</h1>
+        <p class="subtitle">Review your picks before checking out.</p>
+      </div>
+      <button type="button" data-nav="catalog" class="continue-shopping-btn" routerLink="/products">
+        Continue shopping
+      </button>
+    </div>
+
+    <div class="cart-grid">
+      <!-- Cart Items -->
+      <section class="cart-items">
+        <div id="cart-list" class="items-list"></div>
+        <p id="cart-empty" class="empty-msg">Your cart is empty. Add something lovely from the shop.</p>
+      </section>
+
+      <!-- Order Summary -->
+      <aside class="order-summary">
+        <h2>Summary</h2>
+        <div class="summary-details">
+          <div class="line"><span>Subtotal</span><span id="summary-subtotal">₱0.00</span></div>
+          <div class="line"><span>Shipping</span><span>Calculated at checkout</span></div>
+          <div class="line"><span>Estimated tax</span><span>Included</span></div>
+          <hr>
+          <div class="line total"><span>Total</span><span id="summary-total">₱0.00</span></div>
+        </div>
+        <button id="cart-checkout-btn">Proceed to checkout</button>
+        <p class="note">This is a demo flow—no real payments will be processed.</p>
+      </aside>
+    </div>
+  </section>
+</div>

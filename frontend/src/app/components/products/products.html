@@ -1,0 +1,47 @@
+<div class="catalog-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo" routerLink="/">
+      <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
+      <div class="logo-texts">
+        <span class="logo-title">MatahomPH</span>
+        <span class="logo-subtitle">Beauty & Care</span>
+      </div>
+    </div>
+    <div class="nav-profile-cart">
+      <button class="cart-btn" routerLink="/cart">🛒</button>
+    </div>
+  </header>
+
+  <!-- Section Title -->
+  <div class="section-title">
+    <h2>All Products</h2>
+    <p>Soft-focus colors and gentle care, curated for you.</p>
+  </div>
+
+  <!-- Search & Filters -->
+  <div class="search-filters">
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only"></label>
+      <span class="search-icon">🔍</span>
+      <input id="search-input" name="search" type="text" placeholder="Search for lip tints, serums, routines...">
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <div class="filter-buttons">
+      <button type="button" class="filter-chip active" data-filter="all">All</button>
+      <button type="button" class="filter-chip" data-filter="Makeup">Makeup</button>
+      <button type="button" class="filter-chip" data-filter="Skin Care">Skin Care</button>
+      <button type="button" class="filter-chip" data-filter="Body Care">Body Care</button>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="product-grid" id="catalog-grid">
+    <!-- Dynamic product cards will go here -->
+  </div>
+
+  <p id="catalog-empty" class="empty-msg">No products match your search. Try clearing filters.</p>
+
+</div>
