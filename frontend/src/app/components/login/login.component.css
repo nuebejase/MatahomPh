@@ -1,195 +1,126 @@
-/* ===================== OVERLAY ===================== */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
+/* Full page container */
+.login-page {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease;
+  background: linear-gradient(135deg, #fcd5ce, #f8e1f4); /* soft gradient background */
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
-/* ===================== MODAL BOX ===================== */
-.modal-content {
-  background: #ffffff;
-  padding: 20px 18px; /* smaller padding */
-  width: 300px; /* smaller width */
-  max-width: 85%;
+/* Card container */
+.login-card {
+  background-color: #ffffff;
   border-radius: 12px;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  animation: slideDown 0.3s ease;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.modal-content:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* ===================== CLOSE BUTTON ===================== */
-.close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #737749d6;
-  background: #cfd3a7b2;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease;
-}
-
-.close:hover {
-  background: #737749;
-  color: #fff;
-}
-
-/* ===================== TITLE ===================== */
-.modal-title {
-  margin-bottom: 15px;
-  font-size: 20px;
-  font-weight: 600;
+/* Heading */
+.login-card h2 {
   text-align: center;
-  color: #111827;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 1.5rem;
 }
 
-/* ===================== FORM ===================== */
-.modal-form {
+/* Form styles */
+.login-card form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 
-.modal-input {
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 15px;
-  outline: none;
-  transition: border 0.2s, box-shadow 0.2s;
-}
-
-.modal-input:focus {
-  border-color: #737749;
-  box-shadow: 0 0 6px rgba(68, 246, 59, 0.3);
-}
-
-/* ===================== BUTTON ===================== */
-.modal-btn {
-  background: #737749e3;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  cursor: pointer;
+/* Labels */
+.login-card label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #374151; /* gray-700 */
   font-weight: 500;
-  transition: background 0.2s ease, transform 0.1s ease;
 }
 
-.modal-btn:hover {
-  background: #737749;
-  transform: translateY(-1px);
+/* Inputs */
+.login-card input {
+  width: 91%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===================== FOOTER ===================== */
-.modal-footer {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #6b7280;
+.login-card input:focus {
+  border-color: #ec4899; /* pink-500 */
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
 }
 
-.modal-link {
-  background: none;
+/* Button */
+.login-card button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #ec4899; /* pink-500 */
+  color: white;
+  font-weight: 600;
   border: none;
-  color: #737749e3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-card button[type="submit"]:hover {
+  background-color: #db2777; /* pink-600 */
+  transform: translateY(-2px);
+}
+
+/* Message */
+.login-card p {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  color: #ef4444; /* red-500 */
+}
+
+/* Bottom text / register link */
+.login-card .bottom-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b7280; /* gray-600 */
+}
+
+.login-card .bottom-text button {
+  background: none;
+  color: #ec4899;
   font-weight: 600;
   cursor: pointer;
-  transition: color 0.2s;
-}
-
-.modal-link:hover {
-  text-decoration: underline;
-  color: #737749e3;
-}
-
-/* ===================== PASSWORD TOGGLE ===================== */
-.password-wrapper {
-  position: relative;
-}
-
-.password-wrapper input {
-  width: 100%;
-  padding-right: 35px; /* make space for eye icon */
-  box-sizing: border-box;
-}
-
-.show-password-btn {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
   border: none;
-  cursor: pointer;
-  font-size: 16px;
-  color: #737749e3;
-  user-select: none;
-  transition: transform 0.1s;
+  padding: 0;
+  margin-left: 0.25rem;
+  transition: color 0.2s ease;
 }
 
-.show-password-btn:active {
-  transform: translateY(-50%) scale(0.9);
+.login-card .bottom-text button:hover {
+  color: #db2777;
 }
 
-/* ===================== ANIMATIONS ===================== */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-15px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* ===================== MEDIA QUERIES (MOBILE) ===================== */
+/* Responsive adjustments */
 @media (max-width: 480px) {
-  .modal-content {
-    width: 90%;
-    padding: 16px 14px;
-    border-radius: 10px;
+  .login-card {
+      padding: 1.5rem;
   }
 
-  .modal-title {
-    font-size: 18px;
-  }
-
-  .modal-input {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-
-  .modal-btn {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  .close {
-    width: 28px;
-    height: 28px;
-    font-size: 18px;
+  .login-card h2 {
+      font-size: 1.5rem;
   }
 }

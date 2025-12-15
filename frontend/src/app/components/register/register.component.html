@@ -1,35 +1,31 @@
-<div class="modal" *ngIf="isOpen">
-  <div class="modal-content">
-    <button class="close" (click)="closeModal()">&times;</button>
+<div class="auth-page">
+  <div class="auth-card">
+    <h2>Create Your Account</h2>
 
-    <h2 class="modal-title">Register</h2>
-
-    <form (ngSubmit)="register()" class="modal-form">
-      <input type="text" name="full_name" placeholder="Full Name" [(ngModel)]="userData.full_name" class="modal-input">
-      <input type="email" name="email" placeholder="Email" [(ngModel)]="userData.email" class="modal-input">
-      <input type="text" name="username" placeholder="Username" [(ngModel)]="userData.username" class="modal-input">
-
-      <!-- Password field with show/hide -->
-      <div class="password-wrapper">
-        <input
-          [type]="showPassword ? 'text' : 'password'"
-          name="password"
-          placeholder="Password"
-          [(ngModel)]="userData.password"
-          class="modal-input">
-        <button type="button" class="show-password-btn" (click)="togglePassword()">
-          {{ showPassword ? '👁️' : '🙈' }}
-        </button>
+    <form (submit)="register(); $event.preventDefault()">
+      <div>
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name" [(ngModel)]="name" name="name" required />
       </div>
 
-      <input type="text" name="contact_number" placeholder="Contact Number" [(ngModel)]="userData.contact_number" class="modal-input">
-      <input type="text" name="address" placeholder="Address" [(ngModel)]="userData.address" class="modal-input">
-      <button type="submit" class="modal-btn">Register</button>
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required />
+      </div>
+
+      <div>
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <button type="submit">Register</button>
     </form>
 
-    <p class="modal-footer">
-      Already have an account?
-      <button (click)="openLogin()" class="modal-link">Login here</button>
-    </p>
+    <p>{{ message }}</p>
+
+    <div class="bottom-text">
+      <span>Already have an account?</span>
+      <button (click)="goToLogin()">Login</button>
+    </div>
   </div>
 </div>
