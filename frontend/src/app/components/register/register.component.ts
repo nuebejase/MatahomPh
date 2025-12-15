@@ -13,6 +13,7 @@ export class RegisterComponent {
   name = '';
   email = '';
   password = '';
+  address = '';
   message = '';
 
   constructor(private authService: AuthService, private router: Router) {}
