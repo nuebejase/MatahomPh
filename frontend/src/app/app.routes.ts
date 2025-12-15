@@ -7,7 +7,7 @@ import { Profile } from './components/profile/profile';
 import { ProductComponent } from './components/products/products';
 import { AdminPage } from './components/admin/admin';
 import { AdminGuard } from './guards/admin-guard';
-import { CheckoutComponent } from './components/checkout/checkout';
+import { CartComponent } from './components/cart/cart';
 
 
 
@@ -17,6 +17,7 @@ export const routes: Routes = [
   { path: 'register', component: RegisterComponent }, // register page
   {path: 'profile', component: Profile}, // profile page
   {path: 'products', component: ProductComponent}, // products page
+  {path: 'cart', component: CartComponent}, // checkout page
   { path: 'admin', component: AdminPage, canActivate: [AdminGuard] },
 ];
 

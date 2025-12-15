@@ -3,22 +3,20 @@
   <!-- ===================== HEADER ===================== -->
 
   <header class="header">
-
-    <!-- Logo -->
-    <div class="logo">
+    <div class="logo" routerLink="/">
       <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
-      <span class="logo-text" >MatahomPH </span>
-      <span>Beauty & Care</span>
+      <div class="logo-texts">
+        <span class="logo-title">MatahomPH</span>
+        <span class="logo-subtitle">Beauty & Care</span>
+      </div>
     </div>
 
-    <!-- Navigation + Profile + Cart + Orders -->
     <div class="nav-profile-cart">
-        <!-- Cart Button -->
-        <button class="cart-btn">🛒</button>
-
-      </div>
-
+      <!-- Cart Button -->
+      <button class="cart-btn" routerLink="/cart">🛒</button>
+    </div>
   </header>
+
 
   <section id="home-page">
     <div class="container">

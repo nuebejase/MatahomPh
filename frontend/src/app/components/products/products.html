@@ -1,32 +1,47 @@
-<div class="min-h-screen flex flex-col bg-gradient-to-b from-[#faeef2] to-[#f7e6ec]">
+<div class="catalog-page">
 
-  <!-- ===================== HEADER ===================== -->
-
+  <!-- Header -->
   <header class="header">
-
-    <!-- Logo -->
     <div class="logo" routerLink="/">
       <img src="assets/logo.jpg" alt="MatahomPH Logo" class="logo-img">
-      <span class="logo-text" >MatahomPH </span>
-      <span>Beauty & Care</span>
-    </div>
-
-    <!-- Navigation + Profile + Cart + Orders -->
-    <div class="nav-profile-cart">
-        <!-- Cart Button -->
-        <button class="cart-btn">🛒</button>
-
+      <div class="logo-texts">
+        <span class="logo-title">MatahomPH</span>
+        <span class="logo-subtitle">Beauty & Care</span>
       </div>
-
+    </div>
+    <div class="nav-profile-cart">
+      <button class="cart-btn" routerLink="/cart">🛒</button>
+    </div>
   </header>
 
-    <!-- Section Title -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4" style="color: #1e293b; display: flex; justify-content: center; align-items: center;">All Products</h2>
-      <p class="text-lg" style="color: #2b3b52; display: flex; justify-content: center; align-items: center;">
-        Soft-focus colors and gentle care, curated for you.
-      </p>
+  <!-- Section Title -->
+  <div class="section-title">
+    <h2>All Products</h2>
+    <p>Soft-focus colors and gentle care, curated for you.</p>
+  </div>
+
+  <!-- Search & Filters -->
+  <div class="search-filters">
+    <form id="search-form" class="search-form">
+      <label for="search-input" class="sr-only"></label>
+      <span class="search-icon">🔍</span>
+      <input id="search-input" name="search" type="text" placeholder="Search for lip tints, serums, routines...">
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+
+    <div class="filter-buttons">
+      <button type="button" class="filter-chip active" data-filter="all">All</button>
+      <button type="button" class="filter-chip" data-filter="Makeup">Makeup</button>
+      <button type="button" class="filter-chip" data-filter="Skin Care">Skin Care</button>
+      <button type="button" class="filter-chip" data-filter="Body Care">Body Care</button>
     </div>
+  </div>
 
+  <!-- Product Grid -->
+  <div class="product-grid" id="catalog-grid">
+    <!-- Dynamic product cards will go here -->
+  </div>
 
+  <p id="catalog-empty" class="empty-msg">No products match your search. Try clearing filters.</p>
 
+</div>
