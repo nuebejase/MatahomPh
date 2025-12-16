@@ -190,3 +190,119 @@ footer {
   color: #8a6b76;
   border-top: 1px solid #f0cbd8;
 }
+.remove-btn{
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(194,104,140,0.35);
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+.remove-btn:hover{
+  background: rgba(194,104,140,0.10);
+}
+/* ===================== CART ITEM CARD ===================== */
+.cart-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(208, 102, 140, 0.10);
+  border: 1px solid rgba(194, 104, 140, 0.18);
+
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.card-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3a2d33;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(250, 238, 242, 0.75);
+  border: 1px solid rgba(194, 104, 140, 0.12);
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b1f25;
+}
+
+.item-sub {
+  font-size: 12px;
+  color: #6c5560;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 13px;
+  color: #6c5560;
+}
+
+.card-right {
+  min-width: 110px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2b1f25;
+  padding-top: 4px;
+}
+
+/* Make the remove button fit the card */
+.remove-btn {
+  margin-left: 0; /* override your previous margin-left: 10px */
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(194,104,140,0.35);
+  background: rgba(255,255,255,0.95);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.remove-btn:hover {
+  background: rgba(194,104,140,0.10);
+}
+
+/* Responsive: stack price under details */
+@media (max-width: 768px) {
+  .cart-card {
+    flex-direction: column;
+  }
+  .card-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

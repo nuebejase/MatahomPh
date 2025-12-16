@@ -1,18 +1,38 @@
-// src/app/services/order.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
-export interface Order {
-  id?: number;         // or order_id depending on backend
-  user_id: number;
-  total_amount: number;
-  status: string;
-  shipping_address?: string;
+export interface OrderItem {
+  order_items_id: number;
+  order_id: number;
+  product_id: number;
+  quantity: number;
+  price: number;
+  subtotal: number;
   created_at?: string;
 
-  [key: string]: any;
+  // from your OrderItem.to_dict()
+  product_name?: string | null;
+  image_url?: string | null;
 }
+
+export interface Order {
+  order_id: number;          // ✅ matches DB
+  user_id: number;
+  total_amount: number;      // ✅ matches DB
+  status: 'pending' | 'shipped' | 'delivered' | 'cancelled';
+  shipping_address?: string | null;
+  created_at?: string;
+
+  items?: OrderItem[];       // ✅ from Order.to_dict()
+}
+
+export type CreateOrderPayload = {
+  user_id: number;
+  total_amount: number;
+  status: 'pending' | 'shipped' | 'delivered' | 'cancelled';
+  shipping_address: string;
+};
 
 @Injectable({ providedIn: 'root' })
 export class OrderService {
@@ -20,7 +40,7 @@ export class OrderService {
 
   constructor(private http: HttpClient) {}
 
-  createOrder(payload: Partial<Order>): Observable<Order> {
+  createOrder(payload: CreateOrderPayload): Observable<Order> {
     return this.http.post<Order>(`${this.API_BASE}/orders`, payload);
   }
 
@@ -28,19 +48,18 @@ export class OrderService {
     return this.http.get<Order[]>(`${this.API_BASE}/orders`);
   }
 
-  getOrderById(id: number): Observable<Order> {
-    return this.http.get<Order>(`${this.API_BASE}/orders/${id}`);
+  getOrderById(orderId: number): Observable<Order> {
+    return this.http.get<Order>(`${this.API_BASE}/orders/${orderId}`);
   }
 
-  updateOrder(id: number, payload: Partial<Order>): Observable<Order> {
-    return this.http.put<Order>(`${this.API_BASE}/orders/${id}`, payload);
+  updateOrder(orderId: number, payload: Partial<Order>): Observable<Order> {
+    return this.http.put<Order>(`${this.API_BASE}/orders/${orderId}`, payload);
   }
 
-  // ✅ helper: get orders for the logged-in user
   getMyOrders(): Observable<Order[]> {
     const userId = Number(localStorage.getItem('user_id'));
     return this.getOrders().pipe(
-      map((orders) => (orders || []).filter(o => Number(o.user_id) === userId))
+      map((orders) => (orders ?? []).filter((o) => Number(o.user_id) === userId))
     );
   }
 }

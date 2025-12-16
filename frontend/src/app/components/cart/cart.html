@@ -33,23 +33,51 @@
         <p *ngIf="loading">Loading cart...</p>
         <p *ngIf="errorMsg">{{ errorMsg }}</p>
 
-        <!-- Items List -->
-        <div id="cart-list" class="items-list" *ngIf="!loading && !errorMsg && orders.length > 0">
-          <div class="cart-item" *ngFor="let o of orders">
-            <div class="item-info">
-              <p class="item-name">Order #{{ o.id }}</p>
-              <p class="item-meta">Status: {{ o.status }}</p>
-              <p class="item-meta">Ship to: {{ o.shipping_address }}</p>
-            </div>
+      <div
+  id="cart-list"
+  class="items-list"
+  *ngIf="!loading && !errorMsg && orders.length > 0"
+>
+  <ng-container *ngFor="let o of orders; let i = index">
+    <div class="cart-card" *ngIf="(o.items?.length || 0) > 0">
+      <!-- LEFT -->
+      <div class="card-left">
+        <div class="card-title">Order #{{ o.order_id }}</div>
 
-            <div class="item-price">
-              ₱{{ o.total_amount }}
+        <div class="item-row" *ngFor="let it of (o.items || [])">
+          <div class="item-text">
+            <div class="item-name">{{ it['product_name'] }}</div>
+            <div class="item-sub">
+              Qty: {{ it['quantity'] || 1 }} • ₱{{ it['price'] || 0 }}
             </div>
           </div>
+
+          <button type="button" class="remove-btn" (click)="removeItem(i, it)">
+            Remove
+          </button>
         </div>
 
+        <div class="meta">
+          <span>Status: <b>{{ o.status }}</b></span>
+          <span>Ship to: <b>{{ o.shipping_address }}</b></span>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="card-right">
+        <div class="price">₱{{ o.total_amount }}</div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+
         <!-- Empty Message -->
-        <p id="cart-empty" class="empty-msg" *ngIf="!loading && !errorMsg && orders.length === 0">
+        <p
+          id="cart-empty"
+          class="empty-msg"
+          *ngIf="!loading && !errorMsg && orders.length === 0"
+        >
           Your cart is empty. Add something lovely from the shop.
         </p>
       </section>
