@@ -5,7 +5,7 @@ from .user_routes import user_bp
 from .product_routes import product_bp
 from .category_routes import category_bp
 from .order_routes import order_bp
-from .order_items_routes import order_items_bp
+from .order_item_routes import order_items_bp
 from .payment_routes import payment_bp
 from .inventory_routes import inventory_bp
 
